@@ -10,8 +10,8 @@
       </div>
     </header>
     <div class="container">
-      <add :addComment="addComment"></add>
-      <comment-list :comments="comments" :delete-comment="deleteComment"></comment-list>
+      <add :addComment="addComment"> </add>
+      <comment-list :comments="comments" :delete-comment="deleteComment"> </comment-list>
     </div>
   </div>
 </template>
@@ -25,8 +25,10 @@
     data () {
       return {
         comments: [
-          {name: 'Tom', content: 'Vue还不错'},
-          {name: 'Jack', content: 'Vue真不错'}
+          {name: '张三', content: 'Vue还不错'},
+          {name: '李四', content: 'Vue真不错'},
+          {name: '王五',content:'Vue好难啊'},
+          {name: '刘六',content:'Vue好难啊'}
         ]
       }
     },

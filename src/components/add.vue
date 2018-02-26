@@ -25,8 +25,32 @@
           name: '',
           content: ''
         }
+      },
+      props:{
+        addComment:{ //属性名
+          type:Function, //属性值类型
+          required:true //属性的必要性
+        }
+      },
+      methods:{
+        submit(){
+          //检查输入数据
+          const name = this.name.trim ()
+          const content = this.content.trim()
+          if (!name || !content){
+            return
+          }
+          //根据输入的数据封装成comment对象
+          const comment={name, content}
+          //添加到comments
+          this.addComment(comment)
+          //清除输入
+          this.name = ''
+          this .content = ''
+        }
       }
     }
+
 </script>
 
 <style scoped>

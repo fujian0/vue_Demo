@@ -4,8 +4,8 @@
     <h3 class="reply">评论回复：</h3>
     <h2 v-show="comments.length==0">暂无评论，点击左侧添加评论！！！</h2>
     <ul class="list-group">
-      <item v-for="(comment, index) in comments" :comment="comment"
-            :key="index" :deleteComment="deleteComment" :index="index"></item>
+      <item v-for="(comment, index) in comments" :comment="comment" :key="index" :deleteComment="deleteComment" :index="index">
+      </item>
     </ul>
   </div>
 </template>
